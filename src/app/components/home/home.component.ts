@@ -8,6 +8,8 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class HomeComponent implements OnInit {
 
+  newMusic: any[] = [];
+
   constructor( private spotify: SpotifyService) {
 
     /*
@@ -18,7 +20,13 @@ export class HomeComponent implements OnInit {
       client_secret:f824de24dd18474c8378235817479003
     */
 
-    this.spotify.getNewReleases();
+    this.spotify.getNewReleases()
+      .subscribe(
+        (data: any) => {
+          console.log(data.albums.items);
+          this.newMusic = data.albums.items;
+        }
+      );
 
    }
 

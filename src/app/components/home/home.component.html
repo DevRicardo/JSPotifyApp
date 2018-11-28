@@ -1,3 +1,14 @@
-<p>
-  home works!
-</p>
+<div class="card-columns">
+
+  <div *ngFor="let music of newMusic" class="card">
+    <img class="card-img-top" [src]="music.images[0].url" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ music.name }}</h5>
+      <p class="card-text">
+          <span *ngFor="let artist of music.artists" class="badge badge-pill badge-primary">{{ artist.name }}</span>
+      </p>
+    </div>
+  </div>
+
+
+</div>
