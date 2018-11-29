@@ -14,4 +14,16 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
+  viewArtist(item: any) {
+
+    let artistId;
+
+    if (item.type === 'artist') {
+      artistId = item.id;
+    } else {
+      artistId = item.artists[0].id;
+    }
+    console.log(artistId);
+  }
+
 }
