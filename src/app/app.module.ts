@@ -11,6 +11,7 @@ import { NadvarComponent } from './components/shared/nadvar/nadvar.component';
 import { from } from 'rxjs';
 import { ROUTES } from './app.routes';
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { CardComponent } from './components/shared/card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     SearchComponent,
     ArtistComponent,
     NadvarComponent,
-    NoimagePipe
+    NoimagePipe,
+    CardComponent
   ],
   imports: [
     BrowserModule,
